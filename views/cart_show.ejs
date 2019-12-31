@@ -1,0 +1,39 @@
+<%- include ('partials/header') %>
+
+<div class="row text-center" style="display: flex; flex-wrap: wrap;">
+    <% cart.items.forEach(function(item){ %>
+      <div class="card mb-3" >
+        <div class="row no-gutters">
+          <div class="col-md-4">
+            <img src="<%= item.image %>" class="card-img" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title"><%= item.title %></h5>
+              <p class="card-text">Price : <%=item.price%></p>
+              <p class="card-text">Price : <%=item.size%></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% }); %>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <h3>Order Summary</h3>
+  </div>
+  <% cart.items.forEach(function(item){ %>
+  <div class="card-body">
+    <span class="col-md-3"><b><%= item.title %></b></span><span class="col-md-3 text-right"><%=item.price%></span>
+  </div>
+  <hr>
+  <% }); %>
+  <div class="card-footer">
+    TOTAL AMOUNT: <%=cart.amount%>
+  </div>
+</div>
+
+<div>TOTAL PRICE: <%=cart.amount%></div>
+
+<%- include ('partials/footer') %>

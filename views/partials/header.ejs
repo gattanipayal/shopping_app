@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Shopping App</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="/app.css">
+</head>
+<body>
+  <div class="container">
+	
+  		<nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand nav-link" href="/">Brand Name</a>
+        <% if(currentUser){ %>
+          <a class="nav-link" style="float:right;" href="/cart/show">CART</a>
+        <% }else{ %>
+          <a style="float:right;" href="/register">REGISTER</a>
+          <a style="float:right;" href="/login">LOGIN</a>
+        <% } %>
+      </nav>
+  		<ul class="nav navbar-light bg-light justify-content-center">
+  			<li class="nav-item">
+    			<a class="nav-link active" href="/products/Women">Women</a>
+  			</li>
+  			<li class="nav-item">
+    			<a class="nav-link" href="/products/Men">Men</a>
+  			</li>
+        <li class="nav-item">
+          <a class="nav-link" href="/products/Kids">Kids</a>
+        </li>
+		</ul>
+	
+
+
